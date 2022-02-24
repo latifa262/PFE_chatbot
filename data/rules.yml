@@ -1,0 +1,24 @@
+version: "2.0"
+
+rules:
+
+- rule: Say utter_merci anytime the user says merci
+  steps:
+  - intent: merci
+  - action: utter_merci
+  
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodby
+  - action: utter_goodby
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say utter_greet anytime the user says greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+ 

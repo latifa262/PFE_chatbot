@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <style> 
+  .rw-conversation-container .rw-header {background-color:#000000}
+  .rw-conversation-container .rw-messages-container .rw-client {background-color:#909090}
+  .rw-launcher{background-color:#000000}
+
+.ct{
+  position: absolute;
+  top: 8px;
+  left: 90px;
+}
+.ct2{position: absolute;
+   top: 8px;
+   right: 16px;
+}
+
+.ct3{
+  position: absolute;
+   top: 200px;
+   font-size: 60px;
+line-height: 83px;
+font-style: normal;
+color: rgb(0, 0, 0);
+left: 50px;
+   /*font-family:"Honey Bold Banner", Graphik, Helvitika, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;*/
+}
+.ct4{
+  position: absolute;
+   top: 270px;
+   font-size: 60px;
+line-height: 83px;
+font-style: normal;
+color: rgb(0, 0, 0);
+left: 90px;
+}
+
+
+
+.ctt{
+  position: absolute;
+ top: 340px;
+  font-size: 30px;
+line-height: 20px;
+font-style: normal;
+color: rgb(0, 0, 0);
+left: 150px;
+}
+
+.pic{position: absolute;
+   top: 300px;
+   left: 870px;
+  width: 70%;
+  height: 70%;
+}
+   </style>
+
+ <div class="ct"> <img src="p1.png" style="width:50%;"> </div>
+ <div class="ct2"> <img src="p2.png" style="width:50%;"> </div>
+ <div class="ct3"> Welcome to  </div>
+ <div class="ct4">STUDENTS ASSISTANT BOT</div>
+ <div class="ctt"> 
+   <p>I am a Chatbot, Developed to answer </p>
+   <p> students queries of the faculty Semlalia Marrakech .</p>
+</div>
+<div class="pic"> <img src="p4.png" style="width:50%;"> </div>
+
+      <script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          /*initPayload:'',*/
+          customData: { language: "fr" },
+          socketUrl: "http://localhost:5005",
+          // add other props here
+          title:'STUDENTS ASSISTANT BOT'
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+    localStorage.clear();
+})();
+/*function deleteItems(){
+  <button onclick="deleteItems()"></button>
+  localStorage.clear();
+}*/
+</script>
+</body>
+</html>

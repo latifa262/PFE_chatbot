@@ -1,0 +1,223 @@
+version: "2.0"
+
+intents:
+  - valide_module
+  - valide_semestre
+  - greet
+  - merci
+  - inscription
+  - affirm
+  - date_inscription
+  - releve
+  - date_cours
+  - deny
+  - bourse
+  - bot_challenge
+  - goodby
+  - clubs
+  - emploi_temps
+  - change_filiere 
+  - ma_filiere
+  - horaire
+  - module_sem
+  - nb_module
+  - LP
+  - compecampus
+  - formation
+  - ratt
+  - inscription_master
+  - préinscription_master
+  - justification
+  - assurance_médicale
+  - perdcarte
+  - default
+  - how_are_you
+  - localisation
+  - table
+  - table2
+
+actions:
+  - action_ma_filiere
+  - action_horaire
+  - action_nb_module
+  - action_utter_table
+  - action_utter_table2
+
+entities:
+  - filiere
+  - horaire
+  - semestre
+  - departement
+  - caract
+  - nom
+  - prenom
+
+slots:
+  filiere:
+    type: text
+  horaire:
+    type: text 
+  semestre:
+    type: text 
+  caract:
+    type: text
+  departement:
+    type: text
+  nom:
+    type: text
+  prenom:
+    type: text  
+
+responses:
+  utter_greet:
+  - text: |
+      Bonjour! Comment je peux vous aider?
+
+  utter_merci:
+  - text: |
+      je vous en prie.
+  utter_bourse:
+  - text: |
+      Alors pour que votre bourse ne sera pas suspendue vous devez valider au moins 7 modules à chaque année d’étude.
+      pour plus d'information consulter le Service de consultation des bourses au Maroc : [website](https://e-bourse-maroc.onousc.ma/)
+  utter_did_that_help:
+  - text: |
+      Cela vous est utile?
+  utter_affirm:
+  - text: |
+      très bien, bon courage
+  utter_deny:
+  - text: |
+      Tu peux consulter ces liens seront utile pour vous:
+       Site du Ministère de l’enseignement superieur: www.enssup.gov.ma 
+       Site de l’Université Cadi Ayyad : www.uca.ma 
+       Site de la Faculté des sciences semlalia : www. fssm.uca.ma
+       scolarite.fssm.uca.ma
+       Espace Accueil Information et Orientation : eaio.fssm.uca.ma
+
+  utter_inscription:
+  - text: |
+      D'abord, il vous faut une préinscription sur le lien : [website](http://preinscription.uca.ma/)
+      Après vous devez fournir les pièces suivantes: 
+      • L’original et 6 photocopies légalisées du Bac 
+      • 3 photocopies légalisées de la CIN 
+      • 2 photos d’identité (écrire le nom, le prénom, filière et CNE sur le dos des deux photos) 
+      • 3 Extraits d’actes de naissance 
+      • 1 imprimé de bourse (livré à la tour Centrale de la Faculté) Soigneusement rempli
+  utter_goodby:
+  - text: |
+      Au revoir.
+  utter_iamabot:
+  - text: |
+      Je suis un robot. Développé pour répondre aux questions des étudiants/étudiantes de la faculté Semlalia Marrakech.
+      Créé par <OUADDI Latifa> et <HILASS Hanane>.
+  utter_datecours:
+  - text: |
+      Généralement ,elles se déroulent au début du mois de septembre selon un calendrier fixé 
+      après la préinscription sur le lien : [website](http://preinscription.uca.ma/)
+  utter_dateinscription:
+  - text: |
+      La préinscription aura lieu durant la période comprise entre le 24 Août et le 06 Septembre sur le lien : 
+      [website](http://preinscription.uca.ma/) 
+  utter_releve:
+  - text: |
+      D'abord, il vous faut une demande, puis vous devez la donner au résponsable des relevés de notes à côté de la bibliothèque, au pavillon centrale.
+  utter_validemodule:
+  - text: |
+      Pour valider un module, votre note doit être supérieure ou égale à 10/20 
+      et faite attention a l’absences car 2 absences non justifiées 
+      à des travaux pratiques ou l’absence non justifiée à un contrôle entraîne 
+      la non validation du module.
+  utter_validesemestre:
+  - text: |
+      Pour valider un semestre, votre note doit être supérieure ou égale à 10/20, et vous n'avait aucune note éliminatoir(inférieur à 5/20)
+  utter_clubs:
+  - text: |
+      Voici la listes des clubs d'étudiants dans notre établissement : 
+      Club d’Ecologie et d’éducation à l’environnement pour un développement Durable
+      Club Etudiants ISI
+      Club Astronomie
+      Club de Santé
+      Club de Sport
+  utter_emploi:
+  - text: |
+      Merci de visiter ce site : [website](http://emploi-fssm.uca.ma/)
+  utter_change_filiere:
+  - text: |
+      votre filiere s'il vous plaît.
+  utter_module_sem:
+  - text: |
+      Ce site vous aidera beaucoup : [website](https://www.uca.ma/fssm/fr/departement)
+  utter_LP:
+  - text: |
+      Vous trouverez dans ce site tout les informations concernant les LP de FSSM :
+      [website](http://candidaturelp-fssm.uca.ma/)
+  
+  utter_nb_module:
+  - text: |
+      Un semestre est constitué de 7 modules (en S1, S2) ou 6 modules (en S3,S5,S6).
+      Sauf dérogation, l’étudiant s’inscrit au maximum 2 fois à un module.
+
+  utter_formation:
+  - text: |
+      Tout les formations dans fssm de licence jusqu'en doctorat sont ici:
+      [website](http://www.eaio.fssm.uca.ma/admin/file_manage/uploads/montage_verso.pdf)
+
+  utter_ratt:  
+  - text: |
+      Un étudiant ayant validé un module, a acquis définitivement ce module. Il n’est pas de ce fait autorisé 
+      passer le rattrapage pour ce module.
+
+  utter_inscription_master:
+  - text: |
+      Pièces constitutives du dossier pour une première inscription master
+          • Original plus 1 copie certifiée conforme de la Licence ou d’un diplôme reconnu équivalent.
+          • 1 Copie (Recto-Verso) certifiée conforme de l’attestation du Baccalauréat, faisant apparaître les différentes inscriptions post Baccalauréat.
+          • Copies conformes de tous les Diplômes à partir du Baccalauréat.
+          • 1 Copie certifiée conforme de la Carte d’Identité Nationale, ou passeport pour les étudiants étrangers.
+          • 1 Extrait d’acte de naissance (Arabe-Français).
+          • 2 Photos d’identité récentes, avec le nom au verso.
+          • 2 Enveloppes timbrées avec l’adresse du candidat.
+          • Formulaires dûment remplis.
+      pour plus d'information :[website](http://candidaturemaster-fssm.uca.ma/)
+
+  utter_préinscription_master:
+  - text: |
+      pré-inscription en ligne :
+       [website](http://candidaturemaster-fssm.uca.ma/)
+
+  utter_justification:
+  - text: |
+      Les etudiants qui se sont Absences aux Examens ou bien aux Travaux pratiques (TP), doivent presenter les justificatifs 
+      dans les TROIS jours qui suivent au service de scolarite et une copie au chef de filière .
+  
+  utter_perdcarte:
+  - text: |
+      Si cette carte est retrouvée au service, il peut la recupérer. 
+      sinon il doit remplir le Formulaire où il s'engage à rendre sa carte au service de la scolarité une fois retrouvée. 
+      Il doit légaliser ce Formulaire auprès des autorités locales et le retourner au service.  
+  
+  utter_assurance_médicale:
+  - text: |
+      remplir le formulaire de demande d'immatriculation :[website](http://amo.uca.ma/)
+  
+  utter_compecampus:
+  - text: |
+      si vous avez oublié le mot de passe de la plateforme, 
+      tu peux faire 'mot de passe oublier' dans la platforme et tous va reglee.
+ 
+  utter_localisation:
+  - text: |
+      tu peux partir au bureau des renseignement au pavillon centrale il vont mieux vous guider. 
+
+  utter_how_are_you:
+  - text: |
+      hamdollah, Comment je peux vous aider?
+
+  utter_default:
+  - text: |
+      Désolé je n'ai pas compris ce que tu as dit, s'il te plait reformule votre question.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
