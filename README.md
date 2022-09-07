@@ -15,7 +15,7 @@ rasa train
 ```
 rasa run actions
 ```
--- T run the interface :
+-- to run the interface :
 ```
 rasa run -m models --enable-api --cors "*"
 ```
